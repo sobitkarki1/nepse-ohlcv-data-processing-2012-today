@@ -66,8 +66,8 @@ if len(common_keys) > 0:
     
     print(f"Total overlapping rows to compare: {len(merged):,}")
     
-    # Check where OHLCV data doesn't match
-    ohlcv_cols = ['Open', 'High', 'Low', 'Close', 'Volume']
+    # Check where HLCV data doesn't match (ignoring Open)
+    ohlcv_cols = ['High', 'Low', 'Close', 'Volume']
     mismatches = pd.DataFrame()
     
     for col in ohlcv_cols:
